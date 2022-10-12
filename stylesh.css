@@ -1,0 +1,103 @@
+
+
+#bingbong {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  }
+
+#jongjong
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+  }
+
+  li a {
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+ #cheese {
+    text-align: center;
+    text-decoration: underline;
+    grid-column-start: 5;
+    grid-column-end: 6;
+
+  }
+
+  #milvat{
+    text-align: center;
+    overflow: hidden;
+    height: auto;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+
+  #poopy{
+   text-align: center;
+   grid-column-start: 2;
+   grid-column-end: 9;
+  }
+
+  #conk{
+    background-color: grey;
+    display: grid;
+    columns: 10;
+
+  }
+
+
+  #cockin{
+    text-align: center;
+    overflow: hidden;
+    height: auto;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+
+  #milko{
+    text-align: center;
+    text-decoration: underline;
+  
+   grid-column: 2;
+   text-anchor: middle;
+  }
+
+  #donk{
+    background-color: lightgrey;
+    display: grid;
+    columns: 3;
+  
+  }
+#pissy{
+  text-align: center;
+grid-column: 2;
+text-anchor: middle;
+
+}
+  #milta{
+   grid-column: 2;
+  }
