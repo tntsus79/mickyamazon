@@ -79,25 +79,29 @@
   }
 
   #milko{
-    text-align: center;
+ 
     text-decoration: underline;
-  
-   grid-column: 2;
-   text-anchor: middle;
+justify-content: center;
+   grid-column-start: 2;
+   grid-column-end: 3;
+
   }
 
   #donk{
     background-color: lightgrey;
     display: grid;
-    columns: 3;
+    columns: 5;
   
   }
 #pissy{
-  text-align: center;
-grid-column: 2;
-text-anchor: middle;
+
+grid-column-start: 2;
+grid-column-end: 3;
+
 
 }
   #milta{
-   grid-column: 2;
+
+   grid-column-start: 2;
+   grid-column-end: 3;
   }
