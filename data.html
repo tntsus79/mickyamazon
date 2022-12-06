@@ -12,8 +12,56 @@
             <li><a href="https://dnd.wizards.com/">Dunegons And Dragons</a></li>
             <li><a href="data.html" class="pressed">data</a></li>
            </ul>
-    </nav> 
+    </nav>
+    <button id="charbutt">Get Data for Characters</button> 
+<table id="tableplace"></table>
 
+<script>
+   document.getElementById('charbutt').addEventListener('click', (event) => {
+    const ajaxParameters = new FormData;
+    let bingSettings = {
+                    method: 'POST',
+                    body: ajaxParameters
+                };
+
+                fetch("http://localhost/filters/", bingSettings)
+                   .then((response) => {
+                       return new Promise((resolve) => response.json()
+                           .then((json) => resolve({
+                                status: response.status,
+                               json,
+                          })
+                       ));
+                   })  
+                   .then(({status, json}) => {
+            if (status === 200) {
+                let displayTable = '<table>' +
+                                '<thead>' +
+                                    '<tr>' +
+                                        '<th width="20%">character_name</th>' +
+                                        '<th width="20%">character_class</th>' +
+                                        '<th width="20%">character_race</th>' +
+                                        '<th width="20%">character_level</th>' +
+                                        '<th width="20%">character_subclass</th>' +
+                                    '</tr>' +
+                                '</thead>' +
+                                '<tbody>';
+                if (typeof json.data !== 'undefined') {
+                    for (row of json.data) {
+                        displayTable += '<tr>' +
+                            '<td>' + row.character_name + '</td>' +
+                            '<td>' + row.character_class + '</td>' +
+                            '<td>' + row.character_race + '</td>' +
+                            '<td>' + row.character_level + '</td>' +
+                            '<td>' + row.character_subclass + '</td>' +
+                        '</tr>';
+                    }
+                }
+                displayTable += '</tbody></table>';
+                document.getElementById('tableplace').innerHTML = displayTable}
+              
+   })})
+</script>
 </body>
 
 </html>
