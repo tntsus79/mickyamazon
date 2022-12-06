@@ -105,3 +105,18 @@ grid-column-end: 3;
    grid-column-start: 2;
    grid-column-end: 3;
   }
+#bruy{
+  display: grid;
+  columns: 3;
+}
+#charbutt{  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+  #tableplace{
+    text-align: center;
+    background-color: #e3e3e3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+  }
