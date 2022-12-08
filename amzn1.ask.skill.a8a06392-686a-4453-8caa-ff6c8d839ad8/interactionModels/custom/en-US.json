@@ -1,0 +1,392 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dnd game",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "DiceRoller",
+          "slots": [
+            {
+              "name": "number",
+              "type": "DiceSizes",
+              "samples": [
+                "{number}"
+              ]
+            }
+          ],
+          "samples": [
+            "Roll a dice"
+          ]
+        },
+        {
+          "name": "SheetCreator",
+          "slots": [
+            {
+              "name": "CharacterName",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{CharacterName}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "CharacterLevel",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{CharacterLevel}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "CharacterRace",
+              "type": "Races",
+              "samples": [
+                "{CharacterRace}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "CharacterClass",
+              "type": "Classes",
+              "samples": [
+                "{CharacterClass}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            },
+            {
+              "name": "CharacterSubClass",
+              "type": "AMAZON.FirstName",
+              "samples": [
+                "{CharacterSubClass}"
+              ],
+              "multipleValues": {
+                "enabled": true
+              }
+            }
+          ],
+          "samples": [
+            "Make New Character",
+            "make Character",
+            "Make Sheet",
+            "New Sheet",
+            "New Character",
+            "Make Character Sheet"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Giant"
+              }
+            },
+            {
+              "name": {
+                "value": "Orc"
+              }
+            },
+            {
+              "name": {
+                "value": "Halfling"
+              }
+            },
+            {
+              "name": {
+                "value": "Dragon"
+              }
+            },
+            {
+              "name": {
+                "value": "Human"
+              }
+            },
+            {
+              "name": {
+                "value": "Dwarf"
+              }
+            },
+            {
+              "name": {
+                "value": "Elf"
+              }
+            }
+          ],
+          "name": "Races"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Cleric"
+              }
+            },
+            {
+              "name": {
+                "value": "Bard"
+              }
+            },
+            {
+              "name": {
+                "value": "Monk"
+              }
+            },
+            {
+              "name": {
+                "value": "Mage"
+              }
+            },
+            {
+              "name": {
+                "value": "Druid"
+              }
+            },
+            {
+              "name": {
+                "value": "Wizard"
+              }
+            },
+            {
+              "name": {
+                "value": "Barbarian"
+              }
+            },
+            {
+              "name": {
+                "value": "Rogue"
+              }
+            },
+            {
+              "name": {
+                "value": "Paladin"
+              }
+            }
+          ],
+          "name": "Classes"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "hundred"
+              }
+            },
+            {
+              "name": {
+                "value": "twenty"
+              }
+            },
+            {
+              "name": {
+                "value": "twelve"
+              }
+            },
+            {
+              "name": {
+                "value": "ten"
+              }
+            },
+            {
+              "name": {
+                "value": "eight"
+              }
+            },
+            {
+              "name": {
+                "value": "six"
+              }
+            },
+            {
+              "name": {
+                "value": "four"
+              }
+            }
+          ],
+          "name": "DiceSizes"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SheetCreator",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "CharacterName",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1043586720923.1345903999384"
+              }
+            },
+            {
+              "name": "CharacterLevel",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.354311152305.1034070522813"
+              }
+            },
+            {
+              "name": "CharacterRace",
+              "type": "Races",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.444643503195.1060668880105"
+              }
+            },
+            {
+              "name": "CharacterClass",
+              "type": "Classes",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.444643503195.1359752558784"
+              }
+            },
+            {
+              "name": "CharacterSubClass",
+              "type": "AMAZON.FirstName",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.444643503195.713319250338"
+              }
+            }
+          ]
+        },
+        {
+          "name": "DiceRoller",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "number",
+              "type": "DiceSizes",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.980921645195.99807244077",
+                "elicitation": "Elicit.Slot.563682953831.224631270183"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1043586720923.1345903999384",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the character\u0027s name?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.444643503195.1359752558784",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the character\u0027s class?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.444643503195.713319250338",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the character\u0027s subclass?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.444643503195.1060668880105",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the character\u0027s race?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.563682953831.224631270183",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What size dice?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.980921645195.99807244077",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you rolled a {number}"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.354311152305.1034070522813",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the charcter\u0027s level?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}
