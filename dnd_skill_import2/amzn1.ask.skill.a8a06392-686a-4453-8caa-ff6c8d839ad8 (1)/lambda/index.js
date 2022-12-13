@@ -37,8 +37,9 @@ const CreateSheetIntentHandler = {
         const characterLevel = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterLevel');
         const characterRace = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterRace');
         const characterSubclass = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterSubClass');
-        connection.query('INSERT INTO alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (charcterName,characterClass,characterRace,characterLevel,characterSubclass);')
-        
+        let insertSQL = 'INSERT INTO alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);'
+        let intentParams = [characterName,characterClass,characterRace,characterLevel,characterSubclass];
+        connection.query(insertSQL,intentParams); 
         
 
 
