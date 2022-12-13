@@ -4,6 +4,9 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
+const express = require('express');
+const{ ExpressAdapter } = require('ask-sdk-express-adapter');
+const port = 3000 //Default port to http server
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
     host: "bsu-gimm260-fall-2021.cwtgn0g8zxfm.us-west-2.rds.amazonaws.com",
@@ -172,7 +175,7 @@ const ErrorHandler = {
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
  * defined are included below. The order matters - they're processed top to bottom 
  * */
-exports.handler = Alexa.SkillBuilders.custom()
+const skill = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         CreateSheetIntentHandler,
         LaunchRequestHandler,
@@ -185,4 +188,10 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addErrorHandlers(
         ErrorHandler)
     .withCustomUserAgent('sample/hello-world/v1.2')
-    .lambda();
+    .create();
+
+    const adapter = new ExpressAdapter(skill, false, false);
+    const app = express();
+
+    app.post('/', adapter.getRequestHandlers());
+    app.listen(3000);
