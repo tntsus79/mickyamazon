@@ -40,14 +40,19 @@ const CreateSheetIntentHandler = {
         const characterLevel = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterLevel');
         const characterRace = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterRace');
         const characterSubclass = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterSubClass');
-        let insertSQL = 'INSERT INTO alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);'
+        let insertSQL = `INSERT INTO alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);`
         let intentParams = [characterName,characterClass,characterRace,characterLevel,characterSubclass];
-        connection.query(insertSQL,intentParams); 
+        let speakOutput = characterName + " " + characterLevel + " " + characterRace + " " + characterClass + " " + characterSubclass;
+        connection.query(insertSQL,intentParams, (error)=> {
+            if(error){
+                speakOutput = 'Something wrong happened with the server.'
+            }
+            }); 
         
 
 
         return handlerInput.responseBuilder
-            .speak(characterName +" " + characterLevel + " " + characterRace + " " + characterClass + " " + characterSubclass)
+            .speak(speakOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
