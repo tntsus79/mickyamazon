@@ -4,9 +4,14 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require('ask-sdk-core');
-const express = require('express');
- const { ExpressAdapter } = require('ask-sdk-express-adapter');
- 
+const mysql = require('mysql2');
+const connection = mysql.createConnection({
+    host: "bsu-gimm260-fall-2021.cwtgn0g8zxfm.us-west-2.rds.amazonaws.com",
+    user: "MylesHolley",
+    password: "UCK2sEht0Hry8vqIsa7nnODQ58f012KOCx7",
+    database: 'MylesHolley'
+});
+
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
@@ -17,6 +22,30 @@ const LaunchRequestHandler = {
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const CreateSheetIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'SheetCreator';
+    },
+    handle(handlerInput) {
+        const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterName');
+        const characterClass = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterClass');
+        const characterLevel = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterLevel');
+        const characterRace = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterRace');
+        const characterSubclass = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterSubClass');
+        let insertSQL = 'INSERT INTO alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);'
+        let intentParams = [characterName,characterClass,characterRace,characterLevel,characterSubclass];
+        connection.query(insertSQL,intentParams); 
+        
+
+
+        return handlerInput.responseBuilder
+            .speak(characterName +" " + characterLevel + " " + characterRace + " " + characterClass + " " + characterSubclass)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
@@ -51,24 +80,6 @@ const HelpIntentHandler = {
     }
 };
 
-const CreatureCreatorHandler = {
-    canHandle(handlerInput) {
-        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'NameCreatureIntent';
-    },
-    handle(handlerInput) {
-        
-        const creatureName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Creature')
-        const speakOutput = '';
-
-        return handlerInput.responseBuilder
-            .speak(speakOutput)
-            .reprompt(speakOutput)
-            .getResponse();
-            
-    }
-    
-};
 const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -161,12 +172,12 @@ const ErrorHandler = {
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
  * defined are included below. The order matters - they're processed top to bottom 
  * */
-const skill = Alexa.SkillBuilders.custom()
+exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
+        CreateSheetIntentHandler,
         LaunchRequestHandler,
         HelloWorldIntentHandler,
         HelpIntentHandler,
-        CreatureCreatorHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
         SessionEndedRequestHandler,
@@ -174,10 +185,4 @@ const skill = Alexa.SkillBuilders.custom()
     .addErrorHandlers(
         ErrorHandler)
     .withCustomUserAgent('sample/hello-world/v1.2')
-    .create();
-
-    const adapter = new ExpressAdapter(skill, false, false);
-    const app = express();
-
-    app.post('/', adapter.getRequestHandlers());
-    app.listen(3000);
+    .lambda();
