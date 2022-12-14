@@ -105,9 +105,10 @@ const DiceRollerIntentHandler = {
     // function getRandomInt(max) {
     //     return Math.floor(Math.random() * max);
     //   }
-    diceOutput = Math.random() * diceMax;
+    let diceOutput = Math.random() * diceMax;
+    let parsedDice = parseInt(diceOutput);
         return handlerInput.responseBuilder
-            .speak(diceOutput)
+            .speak(parsedDice)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
