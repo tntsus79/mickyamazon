@@ -75,12 +75,12 @@ const AccessSheetIntentHandler = {
                          FROM alexa_characters 
                          WHERE character_name = ?`
         let nameParam = [characterName]
-        const characterClass = character_class;
+        //const characterClass = character_class;
         // const characterRace = character_race;
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        let speakOutput = characterClass;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterName;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, nameParam, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
