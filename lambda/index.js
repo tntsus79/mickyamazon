@@ -80,7 +80,7 @@ const AccessSheetIntentHandler = {
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        let speakOutput = characterName;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterClass;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, nameParam, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
@@ -101,11 +101,11 @@ const DiceRollerIntentHandler = {
     },
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
-    
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-      }
-     let diceOutput = getRandomInt(diceMax);
+        
+    // function getRandomInt(max) {
+    //     return Math.floor(Math.random() * max);
+    //   }
+    diceOutput = Math.random() * diceMax;
         return handlerInput.responseBuilder
             .speak(diceOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
