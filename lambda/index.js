@@ -89,8 +89,10 @@ const DiceRollerIntentHandler = {
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
     
-       let diceOutput = diceMax;
-     
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+      }
+     let diceOutput = getRandomInt(diceMax);
         return handlerInput.responseBuilder
             .speak(diceOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
