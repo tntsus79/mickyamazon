@@ -58,6 +58,46 @@ const CreateSheetIntentHandler = {
     }
 };
 
+const AccessSheetIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AccessSheet';
+    },
+    handle(handlerInput) {
+        const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterName');
+        let selectSQL = `SELECT FROM alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);`
+        let intentParams = [characterName,characterClass,characterRace,characterLevel,characterSubclass];
+        let speakOutput = characterName;
+        connection.query(selectSQL,intentParams, (error)=> {
+            if(error){
+                speakOutput = 'Something wrong happened with the server.'
+            }
+            });
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
+const DiceRollerIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'DiceRoller';
+    },
+    handle(handlerInput) {
+    const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
+    
+       let speakOutput = Math.floor(Math.random() * diceMax);
+     
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+};
+
 const HelloWorldIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -183,6 +223,8 @@ const ErrorHandler = {
 const skill = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         CreateSheetIntentHandler,
+        DiceRollerIntentHandler,
+        AccessSheetIntentHandler,
         LaunchRequestHandler,
         HelloWorldIntentHandler,
         HelpIntentHandler,
