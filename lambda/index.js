@@ -20,7 +20,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say Hello or Help. Which would you like to try?';
+        const speakOutput = 'You started the game. What would you like to do?';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -65,8 +65,10 @@ const AccessSheetIntentHandler = {
     },
     handle(handlerInput) {
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterName');
-        let selectSQL = `SELECT FROM alexa_character(character_name, character_class, character_race, character_level, character_subclass) VALUES (?,?,?,?,?);`
-        let intentParams = [characterName,characterClass,characterRace,characterLevel,characterSubclass];
+        let selectSQL = `SELECT FROM alexa_character
+                         WHERE character_name = characterName`
+        
+        
         let speakOutput = characterName;
         connection.query(selectSQL,intentParams, (error)=> {
             if(error){
