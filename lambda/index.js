@@ -65,16 +65,16 @@ const AccessSheetIntentHandler = {
     },
     handle(handlerInput) {
         
-        const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'CharacterName');
-        // let selectSQL = `SELECT character_name, character_class, character_race, character_level, character_subclass 
-        //                  FROM alexa_characters 
-        //                  WHERE character_name = 'characterName'`
+        const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
+        let selectSQL = `SELECT character_name, character_class, character_race, character_level, character_subclass 
+                         FROM alexa_characters 
+                         WHERE character_name = 'characterName'`
         // const characterClass = character_class;
         // const characterRace = character_race;
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        let speakOutput = characterName; //+ ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterName;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
