@@ -74,7 +74,7 @@ const AccessSheetIntentHandler = {
         const characterLevel = character_level;
         const characterSubclass = character_subclass;               
         
-        let speakOutput = characterName + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterName;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
