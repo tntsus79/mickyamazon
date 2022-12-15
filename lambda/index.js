@@ -63,41 +63,39 @@ const AccessSheetIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AccessSheet';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
-        let selectSQL = `SELECT character_name, 
-                                character_class AS characterClass, 
-                                character_race AS characterRace, 
-                                character_level AS characterLevel, 
-                                character_subclass AS characterSubclass 
+        function sheetManager(){
+            return new Promise((resolve,reject)=>{
+                let selectSQL = `SELECT character_name, 
+                                character_class,
+                                character_race,
+                                character_level,
+                                character_subclass
 
-                         FROM alexa_character 
-                         WHERE character_name = ?`
-        let nameParam = [characterName];
-        //const characterClass = character_class;
-        // const characterRace = character_race;
-        // const characterLevel = character_level;
-        // const characterSubclass = character_subclass;               
-        
-    
-        connection.query(selectSQL, nameParam, (error, result)=> {
-            if(error){
-               
-                return handlerInput.responseBuilder
-                    .speak('Something wrong happened with the server.')
-                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-                    .getResponse();
-            }
-            else{
-                //let characterClass = result.character_class;
-                return handlerInput.responseBuilder
-                    .speak('test')
-                    //.speak("My character's class is " + characterClass)
-                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-                    .getResponse();
-            }
-        });
+                                FROM alexa_character 
+                                WHERE character_name = ?`
+                let nameParam = [characterName];
+                console.log(selectSQL);
+                connection.query(selectSQL, nameParam, (error, result)=> {
+                    if(error){
+                        resolve('something went wrong with the server.')
+                    }
+                    else{
+                        //let characterClass = result.character_class;
+                        let response = nameParam[0] + " is a level " + result[0].character_level + ' ' + result[0].character_class + ' ' + result[0].character_race + ' who has the subclass ' + result[0].character_subclass;
+                        console.log(result);
+                       resolve(response)
+                    }
+                });
+            })
+        }
+        return handlerInput.responseBuilder
+        .speak(await sheetManager())
+        //.speak("My character's class is " + characterClass)
+        //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+        .getResponse();
     }
 };
 
@@ -143,13 +141,14 @@ const DiceRollerIntentHandler = {
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
 
-    // let diceOutput = getRandomInt(diceMax);
-    // let speakOutput = toString(diceOutput);
-    // function getRandomInt(max) {
-    //     return Math.floor(Math.random() * max);  
-    // }
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);  
+    }
 
-    let speakOutput = diceMax;
+    let diceOutput = getRandomInt(diceMax);
+    let speakOutput = diceOutput.toString();
+    
+    //let speakOutput = diceMax;
     let insertSQL = `INSERT INTO dice_roll_tracker(dice_rolled,rolled_value) VALUES (?,?);`
     let intentParams = [diceMax,speakOutput];
     
