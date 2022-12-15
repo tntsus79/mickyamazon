@@ -90,7 +90,7 @@ const AccessSheetIntentHandler = {
                     .getResponse();
             }
             else{
-                let characterClass = result.character_class;
+                //let characterClass = result.character_class;
                 return handlerInput.responseBuilder
                     .speak('test')
                     //.speak("My character's class is " + characterClass)
