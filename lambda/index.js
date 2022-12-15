@@ -80,7 +80,11 @@ const AccessSheetIntentHandler = {
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        
+        return handlerInput.responseBuilder
+            .speak('this is a test')
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+
         connection.query(selectSQL, nameParam, (error, result)=> {
             if(error){
                
