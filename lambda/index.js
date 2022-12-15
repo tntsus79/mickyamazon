@@ -80,7 +80,7 @@ const AccessSheetIntentHandler = {
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        //let speakOutput = characterName + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterClass;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, nameParam, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
@@ -92,6 +92,44 @@ const AccessSheetIntentHandler = {
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
+};
+
+const StatRollerIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StatRoller';
+    },
+    handle(handlerInput) {
+        let selectinnerjoin = `SELECT id, character_name 
+                               FROM alexa_character 
+                               INNER JOIN character_stats 
+                               ON alexa_character.id = character_stats.character_id, alexa_character.character_name = character_stats.character_name;`
+        const strengthScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Strength');
+        const dexterityScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Dexterity');
+        const constitutionScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Constitution');
+        const intellegenceScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Intellegence');
+        const wisdomScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Wisdom');        
+        const charismaScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Charisma'); 
+
+        let insertStatsSQL = `INSERT INTO character_stats(strength_score, dexterity_score, constitution_score, intellegence_score, wisdom_score, charisma_score)  
+                              VALUES (?,?,?,?,?,?);`
+
+        let = intentparams = [strengthScore, dexterityScore, constitutionScore, intellegenceScore, wisdomScore, charismaScore]; 
+
+        let speakOutput = strengthScore + "    " + dexterityScore + "    " + constitutionScore + "    " + intellegenceScore + "    " + wisdomScore + "    " + charismaScore;
+        connection.query(selectinnerjoin, insertStatsSQL, intentparams, (error)=> {
+                    if(error){
+                        speakOutput = 'Something wrong happened with the server.'
+                    }
+                    }); 
+        
+        
+        
+                return handlerInput.responseBuilder
+                    .speak(speakOutput)
+                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+                    .getResponse();
+            }
 };
 
 const DiceRollerIntentHandler = {
@@ -252,6 +290,7 @@ const skill = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         CreateSheetIntentHandler,
         DiceRollerIntentHandler,
+        StatRollerIntentHandler,
         AccessSheetIntentHandler,
         LaunchRequestHandler,
         HelloWorldIntentHandler,
