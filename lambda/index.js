@@ -74,7 +74,7 @@ const AccessSheetIntentHandler = {
 
                          FROM alexa_character 
                          WHERE character_name = ?`
-        let nameParam = [characterName]
+        let nameParam = [characterName];
         //const characterClass = character_class;
         // const characterRace = character_race;
         // const characterLevel = character_level;
@@ -92,7 +92,8 @@ const AccessSheetIntentHandler = {
             else{
                 let characterClass = result.character_class;
                 return handlerInput.responseBuilder
-                    .speak("My character's class is " + characterClass)
+                    .speak('test')
+                    //.speak("My character's class is " + characterClass)
                     //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
                     .getResponse();
             }
