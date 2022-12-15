@@ -67,10 +67,10 @@ const AccessSheetIntentHandler = {
         
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
         let selectSQL = `SELECT character_name, 
-                                character_class, 
-                                character_race, 
-                                character_level, 
-                                character_subclass 
+                                character_class AS characterClass, 
+                                character_race AS characterRace, 
+                                character_level AS characterLevel, 
+                                character_subclass AS characterSubclass 
 
                          FROM alexa_characters 
                          WHERE character_name = ?`
@@ -80,7 +80,7 @@ const AccessSheetIntentHandler = {
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        let speakOutput = characterName;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
+        let speakOutput = characterName + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
         connection.query(selectSQL, nameParam, (error)=> {
             if(error){
                 speakOutput = 'Something wrong happened with the server.'
@@ -101,7 +101,7 @@ const DiceRollerIntentHandler = {
     },
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
-    
+
     // let diceOutput = getRandomInt(diceMax);
     // let speakOutput = toString(diceOutput);
     // function getRandomInt(max) {
