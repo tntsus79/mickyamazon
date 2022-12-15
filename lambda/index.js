@@ -101,13 +101,14 @@ const DiceRollerIntentHandler = {
     },
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
-    let diceOutput = getRandomInt(diceMax);
-    let stringOutput = toString(diceOutput);
-    let speakOutput = parseInt(stringOutput);
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-        
-    }
+    
+    // let diceOutput = getRandomInt(diceMax);
+    // let speakOutput = toString(diceOutput);
+    // function getRandomInt(max) {
+    //     return Math.floor(Math.random() * max);  
+    // }
+
+    let speakOutput = diceMax;
     let insertSQL = `INSERT INTO dice_roll_tracker(dice_rolled,rolled_value) VALUES (?,?);`
     let intentParams = [diceMax,speakOutput];
     
