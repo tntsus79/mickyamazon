@@ -149,3 +149,48 @@ grid-column-end: 3;
     .col-12 {width: 100%;}
 
   }
+
+#viddiv{
+  background-color: lightgrey;
+  display: grid;
+  columns: 5;
+
+}
+
+  #bruhm{
+    text-decoration: underline;
+justify-content: center;
+   grid-column-start: 3;
+   grid-column-end: 5;
+
+  }
+
+  #bruy{
+    display: grid;
+    columns:5;
+  }
+  #dicebut{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    justify-content: center;
+  }
+  #labdiv{
+    display: grid;
+    columns:5;
+  }
+#dicelabel{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-content: center;
+}
+
+#butt2{
+  display: grid;
+    columns:5;
+}
+#charbutt{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-content: center;
+}
+

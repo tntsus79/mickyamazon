@@ -27,9 +27,14 @@
     </div>
     <div  id="target"></div>
     <div id="bruy">
-        <button class="col-2" id="dicebut">get dice rolled stats</button>
-      <label class="col-4" id="dicelabel"></label> 
-    <button id="charbutt">Get Data for Characters</button> 
+        <button style="text-align: center;" class="col-2" id="dicebut">get dice rolled formula</button>
+     </div>
+     <div id="labdiv">
+     <label style="text-align: center;" class="col-4" id="dicelabel"></label> 
+     </div>
+     <div id="butt2">
+    <button class="col-2" id="charbutt">Get Data for Characters</button> 
+    </div>
         <table id="tableplace"></table>
 
 
@@ -89,7 +94,7 @@
     const y_intercept = result.equation[1];
     console.log(gradient);
     console.log(y_intercept);
-    const combined =  "gradient =" + " " + gradient + " " +"y-intercept =" + " " + y_intercept;
+    const combined = "y = mx + b" +" "+ "="+ " " + "y = " + gradient + " + " + y_intercept;
 document.getElementById("dicelabel").innerHTML = combined;
    })
 
