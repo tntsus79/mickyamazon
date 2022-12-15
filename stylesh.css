@@ -194,3 +194,18 @@ justify-content: center;
   justify-content: center;
 }
 
+#conk2{
+  display: grid;
+  columns:5;
+}
+#bing2{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-content: center;
+}
+#bong2{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  justify-content: center;
+ 
+}
