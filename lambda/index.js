@@ -102,7 +102,8 @@ const DiceRollerIntentHandler = {
     handle(handlerInput) {
     const diceMax = Alexa.getSlotValue(handlerInput.requestEnvelope, 'DiceRoll');
     let diceOutput = getRandomInt(diceMax);
-    let speakOutput = toString(diceOutput);
+    let stringOutput = toString(diceOutput);
+    let speakOutput = parseInt(stringOutput);
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
         
