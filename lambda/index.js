@@ -88,7 +88,7 @@ const AccessSheetIntentHandler = {
             });
 
         return handlerInput.responseBuilder
-            .speak(speakOutput)
+            .speak(selectSQL)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
