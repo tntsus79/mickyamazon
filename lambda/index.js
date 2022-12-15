@@ -69,10 +69,8 @@ const AccessSheetIntentHandler = {
         function sheetManager(){
             return new Promise((resolve,reject)=>{
                 let selectSQL = `SELECT character_name, 
-                                character_class AS characterClass, 
-                                character_race AS characterRace, 
-                                character_level AS characterLevel, 
-                                character_subclass AS characterSubclass 
+                                character_class
+                                
 
                                 FROM alexa_character 
                                 WHERE character_name = ?`
