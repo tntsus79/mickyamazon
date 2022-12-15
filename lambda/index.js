@@ -63,41 +63,42 @@ const AccessSheetIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AccessSheet';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
-        let selectSQL = `SELECT character_name, 
+        function sheetManager(){
+            return new Promise((resolve,reject)=>{
+                let selectSQL = `SELECT character_name, 
                                 character_class AS characterClass, 
                                 character_race AS characterRace, 
                                 character_level AS characterLevel, 
                                 character_subclass AS characterSubclass 
 
-                         FROM alexa_character 
-                         WHERE character_name = ?`
-        let nameParam = [characterName];
-        //const characterClass = character_class;
-        // const characterRace = character_race;
-        // const characterLevel = character_level;
-        // const characterSubclass = character_subclass;               
-        
-    
-        connection.query(selectSQL, nameParam, (error, result)=> {
-            if(error){
-               
-                return handlerInput.responseBuilder
-                    .speak('Something wrong happened with the server.')
-                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-                    .getResponse();
-            }
-            else{
-                //let characterClass = result.character_class;
-                return handlerInput.responseBuilder
-                    .speak('test')
-                    //.speak("My character's class is " + characterClass)
-                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-                    .getResponse();
-            }
-        });
+                                FROM alexa_character 
+                                WHERE character_name = ?`
+                let nameParam = [characterName];
+                //const characterClass = character_class;
+                // const characterRace = character_race;
+                // const characterLevel = character_level;
+                // const characterSubclass = character_subclass;               
+                
+            
+                connection.query(selectSQL, nameParam, (error, result)=> {
+                    if(error){
+                        resolve('something went wrong with the server.')
+                    }
+                    else{
+                        //let characterClass = result.character_class;
+                       resolve(result.character_class)
+                    }
+                });
+            })
+        }
+        return handlerInput.responseBuilder
+        .speak(await sheetManager())
+        //.speak("My character's class is " + characterClass)
+        //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+        .getResponse();
     }
 };
 
