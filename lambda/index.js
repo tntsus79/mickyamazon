@@ -104,19 +104,20 @@ const StatRollerIntentHandler = {
                                FROM alexa_character 
                                INNER JOIN character_stats 
                                ON alexa_character.id = character_stats.character_id, alexa_character.character_name = character_stats.character_name;`
+        const name = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Character');
         const strengthScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Strength');
         const dexterityScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Dexterity');
         const constitutionScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Constitution');
-        const intellegenceScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Intellegence');
+        const intelligenceScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Intelligence');
         const wisdomScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Wisdom');        
         const charismaScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Charisma'); 
 
         let insertStatsSQL = `INSERT INTO character_stats(strength_score, dexterity_score, constitution_score, intellegence_score, wisdom_score, charisma_score)  
                               VALUES (?,?,?,?,?,?);`
 
-        let = intentparams = [strengthScore, dexterityScore, constitutionScore, intellegenceScore, wisdomScore, charismaScore]; 
+        let = intentparams = [name, strengthScore, dexterityScore, constitutionScore, intelligenceScore, wisdomScore, charismaScore]; 
 
-        let speakOutput = strengthScore + "    " + dexterityScore + "    " + constitutionScore + "    " + intellegenceScore + "    " + wisdomScore + "    " + charismaScore;
+        let speakOutput = name + " " + strengthScore + " " + dexterityScore + " " + constitutionScore + " " + intelligenceScore + " " + wisdomScore + " " + charismaScore;
         connection.query(selectinnerjoin, insertStatsSQL, intentparams, (error)=> {
                     if(error){
                         speakOutput = 'Something wrong happened with the server.'
