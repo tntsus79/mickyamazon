@@ -69,17 +69,14 @@ const AccessSheetIntentHandler = {
         function sheetManager(){
             return new Promise((resolve,reject)=>{
                 let selectSQL = `SELECT character_name, 
-                                character_class
-                                
+                                character_class,
+                                character_race,
+                                character_level,
+                                character_subclass
 
                                 FROM alexa_character 
                                 WHERE character_name = ?`
                 let nameParam = [characterName];
-                //const characterClass = character_class;
-                // const characterRace = character_race;
-                // const characterLevel = character_level;
-                // const characterSubclass = character_subclass;               
-                
                 console.log(selectSQL);
                 connection.query(selectSQL, nameParam, (error, result)=> {
                     if(error){
@@ -87,7 +84,7 @@ const AccessSheetIntentHandler = {
                     }
                     else{
                         //let characterClass = result.character_class;
-                        let response = nameParam[0] + "is a " + result[0].character_class;
+                        let response = nameParam[0] + " is a level " + result[0].character_level + ' ' + result[0].character_class + ' ' + result[0].character_race + ' who has the subclass ' + result[0].character_subclass;
                         console.log(result);
                        resolve(response)
                     }
