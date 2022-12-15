@@ -87,8 +87,9 @@ const AccessSheetIntentHandler = {
                     }
                     else{
                         //let characterClass = result.character_class;
+                        let response = nameParam[0] + "is a " + result[0].character_class;
                         console.log(result);
-                       resolve(result[0].character_class)
+                       resolve(response)
                     }
                 });
             })
