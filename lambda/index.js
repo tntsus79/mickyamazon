@@ -72,7 +72,7 @@ const AccessSheetIntentHandler = {
                                 character_level AS characterLevel, 
                                 character_subclass AS characterSubclass 
 
-                         FROM alexa_characters 
+                         FROM alexa_character 
                          WHERE character_name = ?`
         let nameParam = [characterName]
         //const characterClass = character_class;
