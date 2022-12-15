@@ -3,7 +3,7 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script id="ss" src="https://unpkg.com/simple-statistics@7.8.0/dist/simple-statistics.min.js"></script>
     <script src="https://unpkg.com/d3-regression@1.3.10/dist/d3-regression.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/regression/2.0.1/regression.min.js" integrity="sha512-0k6FXllQktdobw8Nc8KQN2WtZrOuxpMn7jC2RKCF6LR7EdOhhrg3H5cBPxhs3CFzQVlO6ni1B9SDLUPhBs0Alg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="stylesh.css">
 <style>
  
@@ -27,13 +27,16 @@
     </div>
     <div  id="target"></div>
     <div id="bruy">
-       
+        <button class="col-2" id="dicebut">get dice rolled stats</button>
+      <label class="col-4" id="dicelabel"></label> 
     <button id="charbutt">Get Data for Characters</button> 
         <table id="tableplace"></table>
 
 
 </div>
-<script>
+<script type="module">
+
+   //var regression = require("regression");
    document.getElementById('charbutt').addEventListener('click', (event) => {
     const ajaxParameters = new FormData;
     let bingSettings = {
@@ -79,7 +82,16 @@
               
    })})
 
+   document.getElementById('dicebut').addEventListener('click', (event) => {
 
+    let result = regression.linear([[20,15],[20,11],[20,20],[20,1],[4,3],[20,0]]); 
+    const gradient = result.equation[0];
+    const y_intercept = result.equation[1];
+    console.log(gradient);
+    console.log(y_intercept);
+    const combined =  "gradient =" + " " + gradient + " " +"y-intercept =" + " " + y_intercept;
+document.getElementById("dicelabel").innerHTML = combined;
+   })
 
 
 
