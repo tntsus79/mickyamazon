@@ -112,7 +112,7 @@ const StatRollerIntentHandler = {
         const wisdomScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Wisdom');        
         const charismaScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Charisma'); 
 
-        let insertStatsSQL = `INSERT INTO character_stats(character_name,strength_score, dexterity_score, constitution_score, intelligence_score, wisdom_score, charisma_score) VALUES (?,?,?,?,?,?,?);`
+        let insertStatsSQL = `INSERT INTO character_stats(character_name, strength_score, dexterity_score, constitution_score, intelligence_score, wisdom_score, charisma_score) VALUES (?,?,?,?,?,?,?);`
 
         let = intentparams = [name,strengthScore,dexterityScore,constitutionScore,intelligenceScore,wisdomScore,charismaScore]; 
 
