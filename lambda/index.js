@@ -67,10 +67,10 @@ const AccessSheetIntentHandler = {
         
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
         let selectSQL = `SELECT character_name, 
-                                SET character_class AS characterClass, 
-                                SET character_race AS characterRace, 
-                                SET character_level AS characterLevel, 
-                                SET character_subclass AS characterSubclass 
+                                character_class AS characterClass, 
+                                character_race AS characterRace, 
+                                character_level AS characterLevel, 
+                                character_subclass AS characterSubclass 
 
                          FROM alexa_characters 
                          WHERE character_name = ?`
@@ -80,17 +80,23 @@ const AccessSheetIntentHandler = {
         // const characterLevel = character_level;
         // const characterSubclass = character_subclass;               
         
-        let speakOutput = characterClass;// + ' ' + characterClass + ' ' + characterRace + ' ' + characterLevel + ' ' + characterSubclass;
-        connection.query(selectSQL, nameParam, (error)=> {
+        
+        connection.query(selectSQL, nameParam, (error, result)=> {
             if(error){
-                speakOutput = 'Something wrong happened with the server.'
+               
+                return handlerInput.responseBuilder
+                    .speak('Something wrong happened with the server.')
+                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+                    .getResponse();
             }
-            });
-
-        return handlerInput.responseBuilder
-            .speak(selectSQL)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
-            .getResponse();
+            else{
+                let characterClass = result.character_class;
+                return handlerInput.responseBuilder
+                    .speak("My character's class is " + characterClass)
+                    //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+                    .getResponse();
+            }
+        });
     }
 };
 
