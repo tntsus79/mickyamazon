@@ -100,10 +100,10 @@ const StatRollerIntentHandler = {
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'StatRoller';
     },
     handle(handlerInput) {
-        let selectinnerjoin = `SELECT id, character_name 
+        let selectinnerjoin = `SELECT character_name 
                                FROM alexa_character 
                                INNER JOIN character_stats 
-                               ON alexa_character.id = character_stats.character_id, alexa_character.character_name = character_stats.character_name;`
+                               ON alexa_character.character_name = character_stats.character_name;`
         const name = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Character');
         const strengthScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Strength');
         const dexterityScore = Alexa.getSlotValue(handlerInput.requestEnvelope, 'Dexterity');
