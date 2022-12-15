@@ -80,7 +80,7 @@ const AccessSheetIntentHandler = {
                 // const characterLevel = character_level;
                 // const characterSubclass = character_subclass;               
                 
-            
+                console.log(selectSQL);
                 connection.query(selectSQL, nameParam, (error, result)=> {
                     if(error){
                         resolve('something went wrong with the server.')
