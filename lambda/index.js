@@ -67,10 +67,10 @@ const AccessSheetIntentHandler = {
         
         const characterName = Alexa.getSlotValue(handlerInput.requestEnvelope, 'AccessCharacter');
         let selectSQL = `SELECT character_name, 
-                                character_class AS characterClass, 
-                                character_race AS characterRace, 
-                                character_level AS characterLevel, 
-                                character_subclass AS characterSubclass 
+                                SET character_class AS characterClass, 
+                                SET character_race AS characterRace, 
+                                SET character_level AS characterLevel, 
+                                SET character_subclass AS characterSubclass 
 
                          FROM alexa_characters 
                          WHERE character_name = ?`
