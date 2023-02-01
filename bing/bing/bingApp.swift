@@ -2,7 +2,7 @@
 //  bingApp.swift
 //  bing
 //
-//  Created by Myles Holley on 1/19/23.
+//  Created by Myles Holley on 2/1/23.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct bingApp: App {
     var body: some Scene {
         WindowGroup {
-            homeview()
+            ContentView()
         }
     }
 }

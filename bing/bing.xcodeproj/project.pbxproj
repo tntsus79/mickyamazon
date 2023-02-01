@@ -7,66 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EB5A6D32979FB56008B1374 /* bingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A6D22979FB56008B1374 /* bingApp.swift */; };
-		3EB5A6D52979FB56008B1374 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A6D42979FB56008B1374 /* ContentView.swift */; };
-		3EB5A6D72979FB59008B1374 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5A6D62979FB59008B1374 /* Assets.xcassets */; };
-		3EB5A6DB2979FB59008B1374 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EB5A6DA2979FB59008B1374 /* Preview Assets.xcassets */; };
-		3EB5A6E52979FB59008B1374 /* bingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A6E42979FB59008B1374 /* bingTests.swift */; };
-		3EB5A6EF2979FB59008B1374 /* bingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A6EE2979FB59008B1374 /* bingUITests.swift */; };
-		3EB5A6F12979FB59008B1374 /* bingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A6F02979FB59008B1374 /* bingUITestsLaunchTests.swift */; };
-		3EB5A702297A0B28008B1374 /* homeview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A701297A0B28008B1374 /* homeview.swift */; };
-		3EB5A704297A1308008B1374 /* gameview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5A703297A1308008B1374 /* gameview.swift */; };
+		3ED9814A298AE8A900BBB74F /* bingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED98149298AE8A900BBB74F /* bingApp.swift */; };
+		3ED9814C298AE8A900BBB74F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9814B298AE8A900BBB74F /* ContentView.swift */; };
+		3ED9814E298AE8AB00BBB74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED9814D298AE8AB00BBB74F /* Assets.xcassets */; };
+		3ED98152298AE8AB00BBB74F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED98151298AE8AB00BBB74F /* Preview Assets.xcassets */; };
+		3ED9815C298AE8AB00BBB74F /* bingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9815B298AE8AB00BBB74F /* bingTests.swift */; };
+		3ED98166298AE8AB00BBB74F /* bingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED98165298AE8AB00BBB74F /* bingUITests.swift */; };
+		3ED98168298AE8AB00BBB74F /* bingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED98167298AE8AB00BBB74F /* bingUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3EB5A6E12979FB59008B1374 /* PBXContainerItemProxy */ = {
+		3ED98158298AE8AB00BBB74F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3EB5A6C72979FB56008B1374 /* Project object */;
+			containerPortal = 3ED9813E298AE8A900BBB74F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3EB5A6CE2979FB56008B1374;
+			remoteGlobalIDString = 3ED98145298AE8A900BBB74F;
 			remoteInfo = bing;
 		};
-		3EB5A6EB2979FB59008B1374 /* PBXContainerItemProxy */ = {
+		3ED98162298AE8AB00BBB74F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3EB5A6C72979FB56008B1374 /* Project object */;
+			containerPortal = 3ED9813E298AE8A900BBB74F /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3EB5A6CE2979FB56008B1374;
+			remoteGlobalIDString = 3ED98145298AE8A900BBB74F;
 			remoteInfo = bing;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3EB5A6CF2979FB56008B1374 /* bing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bing.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB5A6D22979FB56008B1374 /* bingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingApp.swift; sourceTree = "<group>"; };
-		3EB5A6D42979FB56008B1374 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3EB5A6D62979FB59008B1374 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3EB5A6D82979FB59008B1374 /* bing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bing.entitlements; sourceTree = "<group>"; };
-		3EB5A6DA2979FB59008B1374 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3EB5A6E02979FB59008B1374 /* bingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB5A6E42979FB59008B1374 /* bingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingTests.swift; sourceTree = "<group>"; };
-		3EB5A6EA2979FB59008B1374 /* bingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EB5A6EE2979FB59008B1374 /* bingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingUITests.swift; sourceTree = "<group>"; };
-		3EB5A6F02979FB59008B1374 /* bingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3EB5A701297A0B28008B1374 /* homeview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeview.swift; sourceTree = "<group>"; };
-		3EB5A703297A1308008B1374 /* gameview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameview.swift; sourceTree = "<group>"; };
+		3ED98146298AE8A900BBB74F /* bing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED98149298AE8A900BBB74F /* bingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingApp.swift; sourceTree = "<group>"; };
+		3ED9814B298AE8A900BBB74F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3ED9814D298AE8AB00BBB74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3ED9814F298AE8AB00BBB74F /* bing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bing.entitlements; sourceTree = "<group>"; };
+		3ED98151298AE8AB00BBB74F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3ED98157298AE8AB00BBB74F /* bingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED9815B298AE8AB00BBB74F /* bingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingTests.swift; sourceTree = "<group>"; };
+		3ED98161298AE8AB00BBB74F /* bingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ED98165298AE8AB00BBB74F /* bingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingUITests.swift; sourceTree = "<group>"; };
+		3ED98167298AE8AB00BBB74F /* bingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3EB5A6CC2979FB56008B1374 /* Frameworks */ = {
+		3ED98143298AE8A900BBB74F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6DD2979FB59008B1374 /* Frameworks */ = {
+		3ED98154298AE8AB00BBB74F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6E72979FB59008B1374 /* Frameworks */ = {
+		3ED9815E298AE8AB00BBB74F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,61 +72,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3EB5A6C62979FB56008B1374 = {
+		3ED9813D298AE8A900BBB74F = {
 			isa = PBXGroup;
 			children = (
-				3EB5A6D12979FB56008B1374 /* bing */,
-				3EB5A6E32979FB59008B1374 /* bingTests */,
-				3EB5A6ED2979FB59008B1374 /* bingUITests */,
-				3EB5A6D02979FB56008B1374 /* Products */,
+				3ED98148298AE8A900BBB74F /* bing */,
+				3ED9815A298AE8AB00BBB74F /* bingTests */,
+				3ED98164298AE8AB00BBB74F /* bingUITests */,
+				3ED98147298AE8A900BBB74F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3EB5A6D02979FB56008B1374 /* Products */ = {
+		3ED98147298AE8A900BBB74F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5A6CF2979FB56008B1374 /* bing.app */,
-				3EB5A6E02979FB59008B1374 /* bingTests.xctest */,
-				3EB5A6EA2979FB59008B1374 /* bingUITests.xctest */,
+				3ED98146298AE8A900BBB74F /* bing.app */,
+				3ED98157298AE8AB00BBB74F /* bingTests.xctest */,
+				3ED98161298AE8AB00BBB74F /* bingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3EB5A6D12979FB56008B1374 /* bing */ = {
+		3ED98148298AE8A900BBB74F /* bing */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5A703297A1308008B1374 /* gameview.swift */,
-				3EB5A6D22979FB56008B1374 /* bingApp.swift */,
-				3EB5A701297A0B28008B1374 /* homeview.swift */,
-				3EB5A6D42979FB56008B1374 /* ContentView.swift */,
-				3EB5A6D62979FB59008B1374 /* Assets.xcassets */,
-				3EB5A6D82979FB59008B1374 /* bing.entitlements */,
-				3EB5A6D92979FB59008B1374 /* Preview Content */,
+				3ED98149298AE8A900BBB74F /* bingApp.swift */,
+				3ED9814B298AE8A900BBB74F /* ContentView.swift */,
+				3ED9814D298AE8AB00BBB74F /* Assets.xcassets */,
+				3ED9814F298AE8AB00BBB74F /* bing.entitlements */,
+				3ED98150298AE8AB00BBB74F /* Preview Content */,
 			);
 			path = bing;
 			sourceTree = "<group>";
 		};
-		3EB5A6D92979FB59008B1374 /* Preview Content */ = {
+		3ED98150298AE8AB00BBB74F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5A6DA2979FB59008B1374 /* Preview Assets.xcassets */,
+				3ED98151298AE8AB00BBB74F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		3EB5A6E32979FB59008B1374 /* bingTests */ = {
+		3ED9815A298AE8AB00BBB74F /* bingTests */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5A6E42979FB59008B1374 /* bingTests.swift */,
+				3ED9815B298AE8AB00BBB74F /* bingTests.swift */,
 			);
 			path = bingTests;
 			sourceTree = "<group>";
 		};
-		3EB5A6ED2979FB59008B1374 /* bingUITests */ = {
+		3ED98164298AE8AB00BBB74F /* bingUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3EB5A6EE2979FB59008B1374 /* bingUITests.swift */,
-				3EB5A6F02979FB59008B1374 /* bingUITestsLaunchTests.swift */,
+				3ED98165298AE8AB00BBB74F /* bingUITests.swift */,
+				3ED98167298AE8AB00BBB74F /* bingUITestsLaunchTests.swift */,
 			);
 			path = bingUITests;
 			sourceTree = "<group>";
@@ -138,13 +132,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3EB5A6CE2979FB56008B1374 /* bing */ = {
+		3ED98145298AE8A900BBB74F /* bing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EB5A6F42979FB59008B1374 /* Build configuration list for PBXNativeTarget "bing" */;
+			buildConfigurationList = 3ED9816B298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bing" */;
 			buildPhases = (
-				3EB5A6CB2979FB56008B1374 /* Sources */,
-				3EB5A6CC2979FB56008B1374 /* Frameworks */,
-				3EB5A6CD2979FB56008B1374 /* Resources */,
+				3ED98142298AE8A900BBB74F /* Sources */,
+				3ED98143298AE8A900BBB74F /* Frameworks */,
+				3ED98144298AE8A900BBB74F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -152,69 +146,69 @@
 			);
 			name = bing;
 			productName = bing;
-			productReference = 3EB5A6CF2979FB56008B1374 /* bing.app */;
+			productReference = 3ED98146298AE8A900BBB74F /* bing.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3EB5A6DF2979FB59008B1374 /* bingTests */ = {
+		3ED98156298AE8AB00BBB74F /* bingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EB5A6F72979FB59008B1374 /* Build configuration list for PBXNativeTarget "bingTests" */;
+			buildConfigurationList = 3ED9816E298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bingTests" */;
 			buildPhases = (
-				3EB5A6DC2979FB59008B1374 /* Sources */,
-				3EB5A6DD2979FB59008B1374 /* Frameworks */,
-				3EB5A6DE2979FB59008B1374 /* Resources */,
+				3ED98153298AE8AB00BBB74F /* Sources */,
+				3ED98154298AE8AB00BBB74F /* Frameworks */,
+				3ED98155298AE8AB00BBB74F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3EB5A6E22979FB59008B1374 /* PBXTargetDependency */,
+				3ED98159298AE8AB00BBB74F /* PBXTargetDependency */,
 			);
 			name = bingTests;
 			productName = bingTests;
-			productReference = 3EB5A6E02979FB59008B1374 /* bingTests.xctest */;
+			productReference = 3ED98157298AE8AB00BBB74F /* bingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3EB5A6E92979FB59008B1374 /* bingUITests */ = {
+		3ED98160298AE8AB00BBB74F /* bingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3EB5A6FA2979FB59008B1374 /* Build configuration list for PBXNativeTarget "bingUITests" */;
+			buildConfigurationList = 3ED98171298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bingUITests" */;
 			buildPhases = (
-				3EB5A6E62979FB59008B1374 /* Sources */,
-				3EB5A6E72979FB59008B1374 /* Frameworks */,
-				3EB5A6E82979FB59008B1374 /* Resources */,
+				3ED9815D298AE8AB00BBB74F /* Sources */,
+				3ED9815E298AE8AB00BBB74F /* Frameworks */,
+				3ED9815F298AE8AB00BBB74F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3EB5A6EC2979FB59008B1374 /* PBXTargetDependency */,
+				3ED98163298AE8AB00BBB74F /* PBXTargetDependency */,
 			);
 			name = bingUITests;
 			productName = bingUITests;
-			productReference = 3EB5A6EA2979FB59008B1374 /* bingUITests.xctest */;
+			productReference = 3ED98161298AE8AB00BBB74F /* bingUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3EB5A6C72979FB56008B1374 /* Project object */ = {
+		3ED9813E298AE8A900BBB74F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					3EB5A6CE2979FB56008B1374 = {
+					3ED98145298AE8A900BBB74F = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					3EB5A6DF2979FB59008B1374 = {
+					3ED98156298AE8AB00BBB74F = {
 						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 3EB5A6CE2979FB56008B1374;
+						TestTargetID = 3ED98145298AE8A900BBB74F;
 					};
-					3EB5A6E92979FB59008B1374 = {
+					3ED98160298AE8AB00BBB74F = {
 						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 3EB5A6CE2979FB56008B1374;
+						TestTargetID = 3ED98145298AE8A900BBB74F;
 					};
 				};
 			};
-			buildConfigurationList = 3EB5A6CA2979FB56008B1374 /* Build configuration list for PBXProject "bing" */;
+			buildConfigurationList = 3ED98141298AE8A900BBB74F /* Build configuration list for PBXProject "bing" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -222,36 +216,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 3EB5A6C62979FB56008B1374;
-			productRefGroup = 3EB5A6D02979FB56008B1374 /* Products */;
+			mainGroup = 3ED9813D298AE8A900BBB74F;
+			productRefGroup = 3ED98147298AE8A900BBB74F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3EB5A6CE2979FB56008B1374 /* bing */,
-				3EB5A6DF2979FB59008B1374 /* bingTests */,
-				3EB5A6E92979FB59008B1374 /* bingUITests */,
+				3ED98145298AE8A900BBB74F /* bing */,
+				3ED98156298AE8AB00BBB74F /* bingTests */,
+				3ED98160298AE8AB00BBB74F /* bingUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3EB5A6CD2979FB56008B1374 /* Resources */ = {
+		3ED98144298AE8A900BBB74F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB5A6DB2979FB59008B1374 /* Preview Assets.xcassets in Resources */,
-				3EB5A6D72979FB59008B1374 /* Assets.xcassets in Resources */,
+				3ED98152298AE8AB00BBB74F /* Preview Assets.xcassets in Resources */,
+				3ED9814E298AE8AB00BBB74F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6DE2979FB59008B1374 /* Resources */ = {
+		3ED98155298AE8AB00BBB74F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6E82979FB59008B1374 /* Resources */ = {
+		3ED9815F298AE8AB00BBB74F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -261,51 +255,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3EB5A6CB2979FB56008B1374 /* Sources */ = {
+		3ED98142298AE8A900BBB74F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB5A6D52979FB56008B1374 /* ContentView.swift in Sources */,
-				3EB5A702297A0B28008B1374 /* homeview.swift in Sources */,
-				3EB5A704297A1308008B1374 /* gameview.swift in Sources */,
-				3EB5A6D32979FB56008B1374 /* bingApp.swift in Sources */,
+				3ED9814C298AE8A900BBB74F /* ContentView.swift in Sources */,
+				3ED9814A298AE8A900BBB74F /* bingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6DC2979FB59008B1374 /* Sources */ = {
+		3ED98153298AE8AB00BBB74F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB5A6E52979FB59008B1374 /* bingTests.swift in Sources */,
+				3ED9815C298AE8AB00BBB74F /* bingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EB5A6E62979FB59008B1374 /* Sources */ = {
+		3ED9815D298AE8AB00BBB74F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EB5A6F12979FB59008B1374 /* bingUITestsLaunchTests.swift in Sources */,
-				3EB5A6EF2979FB59008B1374 /* bingUITests.swift in Sources */,
+				3ED98168298AE8AB00BBB74F /* bingUITestsLaunchTests.swift in Sources */,
+				3ED98166298AE8AB00BBB74F /* bingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3EB5A6E22979FB59008B1374 /* PBXTargetDependency */ = {
+		3ED98159298AE8AB00BBB74F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3EB5A6CE2979FB56008B1374 /* bing */;
-			targetProxy = 3EB5A6E12979FB59008B1374 /* PBXContainerItemProxy */;
+			target = 3ED98145298AE8A900BBB74F /* bing */;
+			targetProxy = 3ED98158298AE8AB00BBB74F /* PBXContainerItemProxy */;
 		};
-		3EB5A6EC2979FB59008B1374 /* PBXTargetDependency */ = {
+		3ED98163298AE8AB00BBB74F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3EB5A6CE2979FB56008B1374 /* bing */;
-			targetProxy = 3EB5A6EB2979FB59008B1374 /* PBXContainerItemProxy */;
+			target = 3ED98145298AE8A900BBB74F /* bing */;
+			targetProxy = 3ED98162298AE8AB00BBB74F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3EB5A6F22979FB59008B1374 /* Debug */ = {
+		3ED98169298AE8AB00BBB74F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,7 +355,7 @@
 			};
 			name = Debug;
 		};
-		3EB5A6F32979FB59008B1374 /* Release */ = {
+		3ED9816A298AE8AB00BBB74F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,7 +406,7 @@
 			};
 			name = Release;
 		};
-		3EB5A6F52979FB59008B1374 /* Debug */ = {
+		3ED9816C298AE8AB00BBB74F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -423,7 +415,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bing/Preview Content\"";
-				DEVELOPMENT_TEAM = CSXF98Y74F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -441,7 +432,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bing;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -451,7 +442,7 @@
 			};
 			name = Debug;
 		};
-		3EB5A6F62979FB59008B1374 /* Release */ = {
+		3ED9816D298AE8AB00BBB74F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -460,7 +451,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"bing/Preview Content\"";
-				DEVELOPMENT_TEAM = CSXF98Y74F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -478,7 +468,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bing;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -488,7 +478,7 @@
 			};
 			name = Release;
 		};
-		3EB5A6F82979FB59008B1374 /* Debug */ = {
+		3ED9816F298AE8AB00BBB74F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -499,7 +489,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bingTests;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -510,7 +500,7 @@
 			};
 			name = Debug;
 		};
-		3EB5A6F92979FB59008B1374 /* Release */ = {
+		3ED98170298AE8AB00BBB74F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -521,7 +511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bingTests;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -532,7 +522,7 @@
 			};
 			name = Release;
 		};
-		3EB5A6FB2979FB59008B1374 /* Debug */ = {
+		3ED98172298AE8AB00BBB74F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -542,7 +532,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bingUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -553,7 +543,7 @@
 			};
 			name = Debug;
 		};
-		3EB5A6FC2979FB59008B1374 /* Release */ = {
+		3ED98173298AE8AB00BBB74F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -563,7 +553,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bong.bingUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = bung.bingUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -577,43 +567,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3EB5A6CA2979FB56008B1374 /* Build configuration list for PBXProject "bing" */ = {
+		3ED98141298AE8A900BBB74F /* Build configuration list for PBXProject "bing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EB5A6F22979FB59008B1374 /* Debug */,
-				3EB5A6F32979FB59008B1374 /* Release */,
+				3ED98169298AE8AB00BBB74F /* Debug */,
+				3ED9816A298AE8AB00BBB74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EB5A6F42979FB59008B1374 /* Build configuration list for PBXNativeTarget "bing" */ = {
+		3ED9816B298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EB5A6F52979FB59008B1374 /* Debug */,
-				3EB5A6F62979FB59008B1374 /* Release */,
+				3ED9816C298AE8AB00BBB74F /* Debug */,
+				3ED9816D298AE8AB00BBB74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EB5A6F72979FB59008B1374 /* Build configuration list for PBXNativeTarget "bingTests" */ = {
+		3ED9816E298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EB5A6F82979FB59008B1374 /* Debug */,
-				3EB5A6F92979FB59008B1374 /* Release */,
+				3ED9816F298AE8AB00BBB74F /* Debug */,
+				3ED98170298AE8AB00BBB74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3EB5A6FA2979FB59008B1374 /* Build configuration list for PBXNativeTarget "bingUITests" */ = {
+		3ED98171298AE8AB00BBB74F /* Build configuration list for PBXNativeTarget "bingUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3EB5A6FB2979FB59008B1374 /* Debug */,
-				3EB5A6FC2979FB59008B1374 /* Release */,
+				3ED98172298AE8AB00BBB74F /* Debug */,
+				3ED98173298AE8AB00BBB74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3EB5A6C72979FB56008B1374 /* Project object */;
+	rootObject = 3ED9813E298AE8A900BBB74F /* Project object */;
 }
