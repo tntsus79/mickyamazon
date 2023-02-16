@@ -43,9 +43,19 @@ struct ARViewContainer: UIViewRepresentable {
         context.coordinator.arView = arView
        
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
+         let boxAnchor = Experience.Box()
         context.coordinator.boxscene = boxAnchor
-        boxAnchor.actions.hits.onAction = handleTapOnEntity(_:)
+        
+        let entity2 = boxAnchor.box! as! (Entity & HasPhysics)
+        
+        entity2.physicsBody = .none
+        
+        let entity3 = boxAnchor.ball! as! (Entity & HasPhysics)
+        
+        entity3.physicsBody = .none
+        
+     
+        
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
         
