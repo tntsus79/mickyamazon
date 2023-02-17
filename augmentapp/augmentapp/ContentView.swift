@@ -7,18 +7,44 @@
 
 import SwiftUI
 import RealityKit
+struct SimpleGameResult {
+    let id = UUID()
+    let score: Int
 
+}
 struct ContentView : View {
+   //binding variable
+    @Binding var  desiredscore: String
+    
+    let results = [
+        SimpleGameResult(score: 8)
+    
+    ]
+   
     var body: some View {
         ARViewContainer().edgesIgnoringSafeArea(.all)
-    }
+        
+         
+     
+       
+            
+           
+        //creation of views in loop
+        VStack(alignment: .leading,spacing: 10) {
+        ForEach(results, id: \.id) { result in
+                       Text("Result: \(result.score)")
+                                                
+                    
+                   }//reading text from textfield
+                          TextField("enter your desired score",text: $desiredscore)
+                   Text("Your desired score is \(desiredscore)")               }
+               }
 }
 
 struct ARViewContainer: UIViewRepresentable {
    
     
-
-    
+   
     
     
     
@@ -36,6 +62,7 @@ struct ARViewContainer: UIViewRepresentable {
     
     
     func makeUIView(context: Context) -> ARView {
+     
         
              // Do something with entity...
          
@@ -43,31 +70,36 @@ struct ARViewContainer: UIViewRepresentable {
         context.coordinator.arView = arView
        
         // Load the "Box" scene from the "Experience" Reality File
-         let boxAnchor = Experience.Box()
+        
+        let boxAnchor = try! Experience.loadBox()
+        
         context.coordinator.boxscene = boxAnchor
+        //const variable
+
+        boxAnchor.actions.ballbounce.onAction = handleTapOnEntity(_:)
+  
         
-        let entity2 = boxAnchor.box! as! (Entity & HasPhysics)
-        
-        entity2.physicsBody = .none
-        
-        let entity3 = boxAnchor.ball! as! (Entity & HasPhysics)
-        
-        entity3.physicsBody = .none
-        
-        var hit:CustomStringConvertible = boxAnchor.notifications.ballbounce as! CustomStringConvertible
-        /storage of numbers/
-        var hitcount = 0
-       let hitstring = String(hit)
-        let hitbool = 
-        if(hit == true){
-            
-        }
        
-        while hitcount != 20{
-            
-        }
+       
+      
         
+        
+       
+  
+       
+        
+        //function as parameter
+        boxAnchor.actions.succcollide.onAction  = handleTapOnEntity(_:)
+       
+      
+        
+        
+        
+        
+
      
+      
+        
         
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
@@ -78,8 +110,66 @@ struct ARViewContainer: UIViewRepresentable {
     func handleTapOnEntity(_ entity: Entity?) {
         guard let entity = entity else { return }
         // Do something with entity...
+        let rolls = rolldice2(sides:6,count:4)
+        //storage of numbers/
+        var hitcount = 0
+        hitcount += 1
+        var bing = ""
+        var boatbruh = ""
+        var cellb = " hit"
+        enum responses{
+           case curentlyplaying, done
+        }
+        
+        var tong = responses.curentlyplaying
+         
+        
+        //switch statement
+        switch tong {
+        case .curentlyplaying: print("currently playing")
+        case .done: print("done with game")
+        default:
+           print("nice")
+        }
+        if(bing == "1"){
+         boatbruh = "good"
+        }else if(bing == "2"){
+            boatbruh = "bad"
+        }
+        if(bing == "1"){
+            
+        }
+        //joining of strings
+        var cellbboat = boatbruh + cellb    }
+    
+    func randomdirect(vectorx: Int, vectorz: Int, vectory: Int )->Int{
+       
+        //return multiple values from function
+        var vectors = [Int(), Int(), Int()]
+        var vectorsx = Int.random(in: -2...6)
+        var vectorsy =
+        Int.random(in: -2...6)
+        var vectorsz = Int.random(in: -2...6)
+        vectors.append(vectorsx)
+        vectors.append(vectorsy)
+        vectors.append(vectorsz)
+        return vectorsx
+        return vectorsy
+        return vectorz
+      
     }
-
+    //customize parameter label
+    func rolldice2(sides: Int, count:Int)->[Int]{
+        var rolls = [Int]()
+        for _ in 1...count{
+            let roll = Int.random(in:1...sides)
+            rolls.append(roll)
+            let rolls = rolldice2(sides:6,count:4)
+        }
+        return rolls
+        
+    }
+    
     func updateUIView(_ uiView: ARView, context: Context) {}
     func makeCoordinator() -> Coordinator {
         Coordinator()
@@ -102,10 +192,5 @@ class Coordinator: NSObject
     }}
 
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-#endif
+
+
