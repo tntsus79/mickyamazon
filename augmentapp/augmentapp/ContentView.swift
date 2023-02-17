@@ -54,6 +54,19 @@ struct ARViewContainer: UIViewRepresentable {
         
         entity3.physicsBody = .none
         
+        var hit:CustomStringConvertible = boxAnchor.notifications.ballbounce as! CustomStringConvertible
+        /storage of numbers/
+        var hitcount = 0
+       let hitstring = String(hit)
+        let hitbool = 
+        if(hit == true){
+            
+        }
+       
+        while hitcount != 20{
+            
+        }
+        
      
         
         // Add the box anchor to the scene
