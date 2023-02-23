@@ -14,7 +14,7 @@ struct SimpleGameResult {
 }
 struct ContentView : View {
    //binding variable
-    @Binding var  desiredscore: String
+    @State var desiredscore = ""
     
     let results = [
         SimpleGameResult(score: 8)
@@ -22,10 +22,10 @@ struct ContentView : View {
     ]
    
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ARViewContainer(desiredscore: $desiredscore).edgesIgnoringSafeArea(.all)
         
          
-     
+        
        
             
            
@@ -44,8 +44,7 @@ struct ContentView : View {
 struct ARViewContainer: UIViewRepresentable {
    
     
-   
-    
+    @Binding var desiredscore: String
     
     
     
@@ -164,8 +163,9 @@ struct ARViewContainer: UIViewRepresentable {
         for _ in 1...count{
             let roll = Int.random(in:1...sides)
             rolls.append(roll)
-            let rolls = rolldice2(sides:6,count:4)
+           
         }
+         rolls = rolldice2(sides:6,count:4)
         return rolls
         
     }
