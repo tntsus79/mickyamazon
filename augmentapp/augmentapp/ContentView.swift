@@ -161,11 +161,11 @@ struct ARViewContainer: UIViewRepresentable {
     func rolldice2(sides: Int, count:Int)->[Int]{
         var rolls = [Int]()
         for _ in 1...count{
-            let roll = Int.random(in:1...sides)
-            rolls.append(roll)
+            //let roll = Int.random(in:1...sides)
+           // rolls.append(roll)
            
         }
-         rolls = rolldice2(sides:6,count:4)
+         //rolls = rolldice2(sides:6,count:4)
         return rolls
         
     }
