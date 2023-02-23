@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E206B9E2995A65F00D05FA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206B9D2995A65F00D05FA6 /* AppDelegate.swift */; };
 		3E206BA02995A65F00D05FA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206B9F2995A65F00D05FA6 /* ContentView.swift */; };
 		3E206BA22995A65F00D05FA6 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BA12995A65F00D05FA6 /* Experience.rcproject */; };
 		3E206BA42995A66000D05FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E206BA32995A66000D05FA6 /* Assets.xcassets */; };
@@ -15,6 +14,7 @@
 		3E206BB12995A66100D05FA6 /* augmentappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BB02995A66100D05FA6 /* augmentappTests.swift */; };
 		3E206BBB2995A66100D05FA6 /* augmentappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BBA2995A66100D05FA6 /* augmentappUITests.swift */; };
 		3E206BBD2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BBC2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift */; };
+		3EB8942129A7E8890094B3E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8942029A7E8890094B3E1 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		3E206B9A2995A65F00D05FA6 /* augmentapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = augmentapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E206B9D2995A65F00D05FA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E206B9F2995A65F00D05FA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E206BA12995A65F00D05FA6 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		3E206BA32995A66000D05FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		3E206BB62995A66100D05FA6 /* augmentappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = augmentappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E206BBA2995A66100D05FA6 /* augmentappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augmentappUITests.swift; sourceTree = "<group>"; };
 		3E206BBC2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augmentappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EB8942029A7E8890094B3E1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../../../.Trash/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 		3E206B9C2995A65F00D05FA6 /* augmentapp */ = {
 			isa = PBXGroup;
 			children = (
-				3E206B9D2995A65F00D05FA6 /* AppDelegate.swift */,
+				3EB8942029A7E8890094B3E1 /* AppDelegate.swift */,
 				3E206B9F2995A65F00D05FA6 /* ContentView.swift */,
 				3E206BA12995A65F00D05FA6 /* Experience.rcproject */,
 				3E206BA32995A66000D05FA6 /* Assets.xcassets */,
@@ -260,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EB8942129A7E8890094B3E1 /* AppDelegate.swift in Sources */,
 				3E206BA02995A65F00D05FA6 /* ContentView.swift in Sources */,
-				3E206B9E2995A65F00D05FA6 /* AppDelegate.swift in Sources */,
 				3E206BA22995A65F00D05FA6 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
