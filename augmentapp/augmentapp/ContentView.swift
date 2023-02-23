@@ -7,7 +7,6 @@
 
 import SwiftUI
 import RealityKit
-
 struct SimpleGameResult {
     let id = UUID()
     let score: Int
@@ -15,22 +14,20 @@ struct SimpleGameResult {
 }
 struct ContentView : View {
    //binding variable
-
-   
+    @Binding var  desiredscore: String
+    
     let results = [
-        SimpleGameResult(score: 0)
+        SimpleGameResult(score: 8)
     
     ]
    
-    
-        @State var desiredscore = ""
-    
     var body: some View {
-        ARViewContainer(desiredscore: $desiredscore).edgesIgnoringSafeArea(.all)
+        ARViewContainer().edgesIgnoringSafeArea(.all)
         
+         
+     
        
-       
-       
+            
            
         //creation of views in loop
         VStack(alignment: .leading,spacing: 10) {
@@ -39,15 +36,15 @@ struct ContentView : View {
                                                 
                     
                    }//reading text from textfield
-            TextField("enter your desired score",text: $desiredscore)
-            Text("Your desired score is \(desiredscore)")               }
+                          TextField("enter your desired score",text: $desiredscore)
+                   Text("Your desired score is \(desiredscore)")               }
                }
 }
 
 struct ARViewContainer: UIViewRepresentable {
-   //binding variable
+   
     
-    @Binding var desiredscore: String
+   
     
     
     
