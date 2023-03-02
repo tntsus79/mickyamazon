@@ -15,6 +15,7 @@
 		3E206BB12995A66100D05FA6 /* augmentappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BB02995A66100D05FA6 /* augmentappTests.swift */; };
 		3E206BBB2995A66100D05FA6 /* augmentappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BBA2995A66100D05FA6 /* augmentappUITests.swift */; };
 		3E206BBD2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E206BBC2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift */; };
+		3EE054CB29B157260090FE66 /* swiftview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE054CA29B157260090FE66 /* swiftview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3E206BB62995A66100D05FA6 /* augmentappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = augmentappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E206BBA2995A66100D05FA6 /* augmentappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augmentappUITests.swift; sourceTree = "<group>"; };
 		3E206BBC2995A66100D05FA6 /* augmentappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = augmentappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3EE054CA29B157260090FE66 /* swiftview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				3E206B9D2995A65F00D05FA6 /* AppDelegate.swift */,
 				3E206B9F2995A65F00D05FA6 /* ContentView.swift */,
+				3EE054CA29B157260090FE66 /* swiftview.swift */,
 				3E206BA12995A65F00D05FA6 /* Experience.rcproject */,
 				3E206BA32995A66000D05FA6 /* Assets.xcassets */,
 				3E206BA52995A66000D05FA6 /* Preview Content */,
@@ -262,6 +265,7 @@
 			files = (
 				3E206BA02995A65F00D05FA6 /* ContentView.swift in Sources */,
 				3E206B9E2995A65F00D05FA6 /* AppDelegate.swift in Sources */,
+				3EE054CB29B157260090FE66 /* swiftview.swift in Sources */,
 				3E206BA22995A65F00D05FA6 /* Experience.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
