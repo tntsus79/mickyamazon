@@ -4,7 +4,7 @@
 //
 //  Created by Myles Holley on 2/9/23.
 //
-
+import ARKit
 import SwiftUI
 import RealityKit
 struct SimpleGameResult {
@@ -65,10 +65,13 @@ struct ARViewContainer: UIViewRepresentable {
         
              // Do something with entity...
          
-        let arView = ARView(frame: .zero)
+        let arView = CustomARView(frame: .zero)
         context.coordinator.arView = arView
        
+        
+        arView.session.delegate = context.coordinator
         // Load the "Box" scene from the "Experience" Reality File
+        
         
         let boxAnchor = try! Experience.loadBox()
         
@@ -175,9 +178,10 @@ struct ARViewContainer: UIViewRepresentable {
         Coordinator()
     }
 }
-class Coordinator: NSObject
+class Coordinator: NSObject, ARSessionDelegate
 {
-    weak var arView: ARView?
+    weak var view:CustomARView?
+    weak var arView: CustomARView?
     weak var boxscene: Experience.Box?
     override init(){
         super.init()
@@ -189,8 +193,17 @@ class Coordinator: NSObject
             
             self.boxscene!.notifications.ballbounce.post()
         }
+        
+        func session(_session: ARSession, didAdd anchors: [ARAnchor]){
+            for anchor in anchors {
+                if(anchor.name == "bombastic"){
+                    let anchorEntity = AnchorEntity(world: anchor.transform)
+                    let boxAnchor = try! Experience.loadBox()
+                    anchorEntity.addChild(boxAnchor)
+                    view!.scene.anchors.append(boxAnchor)
+                }
+            }
+        }
     }}
-
-
 
 
