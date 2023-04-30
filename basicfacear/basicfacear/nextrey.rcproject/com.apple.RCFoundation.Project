@@ -53,7 +53,7 @@
                           "message",
                           {
                             "typeName" : "String",
-                            "value" : "Hello, world!"
+                            "value" : ""
                           }
                         ],
                         [
