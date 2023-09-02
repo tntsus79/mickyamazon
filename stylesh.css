@@ -209,3 +209,19 @@ justify-content: center;
   justify-content: center;
  
 }
+
+.logo{
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  float:left;
+
+}
+
+.float-left{
+  float: left!important;
+  
+}
+
+
+
