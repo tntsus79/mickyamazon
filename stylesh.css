@@ -1,262 +1,39 @@
-
-
-#bingbong {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: #f1f1f1;
-    height: 100%; /* Full height */
-    position: fixed; /* Make it stick, even on scroll */
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
-  }
-
-#jongjong
-{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-
-  }
-
-  li a {
-    display: block;
-    color: red;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
-
- #cheese {
-    text-align: center;
-    text-decoration: underline;
-    grid-column-start: 5;
-    grid-column-end: 6;
-
-  }
-
-  #milvat{
-    text-align: center;
-    overflow: hidden;
-    height: auto;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    grid-column-start: 4;
-    grid-column-end: 9;
-  }
-
-  #poopy{
-   text-align: center;
-   grid-column-start: 2;
-   grid-column-end: 9;
-  }
-
-  #conk{
-    background-color: grey;
-    display: grid;
-    columns: 10;
-
-  }
-
-
-  #cockin{
-    text-align: center;
-    overflow: hidden;
-    height: auto;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-    grid-column-start: 4;
-    grid-column-end: 9;
-  }
-
-  #milko{
- 
-    text-decoration: underline;
-justify-content: center;
-   grid-column-start: 2;
-   grid-column-end: 3;
-
-  }
-
-  #donk{
-    background-color: lightgrey;
-    display: grid;
-    columns: 5;
-  
-  }
-#pissy{
-
-grid-column-start: 2;
-grid-column-end: 3;
-
-
+body {
+  font-family: 'Arial', sans-serif;
 }
-  #milta{
 
-   grid-column-start: 2;
-   grid-column-end: 3;
-  }
-#bruy{
+.container {
+  text-align: center;
+}
+
+.button-container {
   display: grid;
-  columns: 3;
-}
-#charbutt{  grid-column-start: 1;
-  grid-column-end: 3;
-
-}
-  #tableplace{
-    text-align: center;
-    background-color: #e3e3e3;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-
-  
-  
-  
-    @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-
-  }
-
-#viddiv{
-  background-color: lightgrey;
-  display: grid;
-  columns: 5;
-
-}
-
-  #bruhm{
-    text-decoration: underline;
-justify-content: center;
-   grid-column-start: 3;
-   grid-column-end: 5;
-
-  }
-
-  #bruy{
-    display: grid;
-    columns:5;
-  }
-  #dicebut{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    justify-content: center;
-  }
-  #labdiv{
-    display: grid;
-    columns:5;
-  }
-#dicelabel{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  justify-content: center;
-}
-
-#butt2{
-  display: grid;
-    columns:5;
-}
-#charbutt{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  justify-content: center;
-}
-
-#conk2{
-  display: grid;
-  columns:5;
-}
-#bing2{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  justify-content: center;
-}
-#bong2{
-  grid-column-start: 3;
-  grid-column-end: 5;
-  justify-content: center;
- 
-}
-
-.logo{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   margin-top: 20px;
-  width: 100px;
-  height: 100px;
-  float:left;
-
 }
 
-.float-left{
-  float: left!important;
-
+/* Navbar styles */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
 }
 
-.navbar{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #dddddd;
 }
 
-.navbar-brand{
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
+/* Responsive styles */
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+    margin: 0 auto;
+  }
 
+  .navbar-toggler {
+    margin: 0 auto;
+  }
+
+  .button-container {
+    grid-template-columns: 1fr;
+  }
 }
-
-.navbar-dark .navbar-brand{
-  color: #fff;
-}
-
-body{
-  margin: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
-}
-
-
-
