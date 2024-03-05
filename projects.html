@@ -7,10 +7,30 @@
   <link rel="stylesheet" href="stylesh.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    body {
+    html {
+      background-image: url('runtbruh.jpeg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      animation: spaceMovement 70s linear infinite; 
+   
+    }
+    body{
       background-color: #222;
       color: steelblue;
     }
+
+    @keyframes spaceMovement {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+
+      
+    }
+
   </style>
 </head>
 <body>

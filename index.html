@@ -8,12 +8,42 @@
 <style type="text/css" id="operaUserStyle"></style>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<style>
-  body {
-    background-color: #222;
-    color: steelblue;
-  }
-</style>
+
+
+
+  <style>
+    html {
+      background-image: url('runtbruh.jpeg'); 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      animation: spaceMovement 70s linear infinite; 
+   
+    }
+    body{
+      background-color: #222;
+      color: steelblue;
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+
+    @keyframes spaceMovement {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 100% 100%;
+      }
+
+      
+    }
+
+    
+  </style>
+
    </head>
    <body>
 
@@ -39,6 +69,8 @@
           </li>
         </ul>
       </div>
+
+      
     </nav>
   
     <!-- Main Content -->
@@ -53,23 +85,23 @@
         <a class="btn btn-info" href="contact.html" style="background-color: steelblue;">Contact Me</a>
       </div>
     </div>
-    <div class="container mt-5">
-      <div class="row mt-4">
-        <div class="col-md-4 mb-4">
-          <a href="" data-lightbox="indexpho">
-          <img src="" class="img-fluid" alt="index photo 1">
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="" data-lightbox="indexpho">
-          <img src="" class="img-fluid" alt="index photo 2">
-          </a>
-        </div>
-        <div class="col-md-4 mb-4">
-          <a href="" data-lightbox="indexpho">
-          <img src="" class="img-fluid" alt="index photo 3">
-          </a>
-        </div>
+ 
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@<version>/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@<version>/examples/jsm/"
+        }
+      }
+    </script>
+ <!-- Container for the 3D scene -->
+ <script type="module" src="/main.js"></script>
+
+ <!-- credits for model : "D20 Dice (W20 Würfel) 3D model [FREE]" (https://skfb.ly/onUnH) by VertexDon is licensed under Creative Commons Attribution-ShareAlike (http://creativecommons.org/licenses/by-sa/4.0/).-->
+ 
+
+        
+        
 
 </div>
 <footer class="bottom-navigation">
