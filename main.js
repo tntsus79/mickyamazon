@@ -21,14 +21,14 @@ let object;
 let controls;
 
 //Set which object to render
-let objToRender = 'd290dice';
+let objToRender = 'scene.gltf';
 
 //Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
 
 //Load the file
 loader.load(
-  `${objToRender}/scene.gltf`,
+  `d290dice/${objToRender}`,
   function (gltf) {
     //If the file is loaded, add it to the scene
     object = gltf.scene;
