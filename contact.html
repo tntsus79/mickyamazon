@@ -81,35 +81,29 @@
 <div class="container mt-5">
   <form id="contact-form">
     <!-- To simplify the tutorial, the value is static. -->
-    <input type="hidden" name="contact_number" value="697483">
-    <label>Name</label>
-    <input type="text" name="user_name">
-    <label>Email</label>
-    <input type="email" name="user_email">
-    <label>Message</label>
-    <textarea name="message"></textarea>
-    <input type="submit" value="Send">
+    <input type="hidden" name="contact_number" value="697483"><br>
+    <label>Name</label><br>
+    <input type="text" name="user_name"><br>
+    <label>Email</label><br>
+    <input type="email" name="user_email"><br>
+    <label>Message</label><br>
+    <textarea name="message"></textarea><br>
+    <input type="submit" value="Send"><br>
 </form>
 </div>
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Collect form data
-    var formData = new FormData(this);
-    // Send email
-    emailjs.sendForm('service_d5x2g0q', 'template_tdykk1f', formData)
-      .then(function(response) {
-        console.log('Email sent successfully:', response);
-        // Optionally, show a success message to the user
-        alert('Your message has been sent successfully!');
-        // Clear the form
-        document.getElementById('contact-form').reset();
-      }, function(error) {
-        console.error('Email send failed:', error);
-        // Optionally, show an error message to the user
-        alert('Sorry, there was an error sending your message. Please try again later.');
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_d5x2g0q', 'template_tdykk1f', this)
+              .then(() => {
+                  console.log('SUCCESS!');
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
       });
-  });
+  }
 </script>
 
 
