@@ -41,6 +41,17 @@
       
     }
 
+    /* Custom styles for buttons */
+    .btn-custom {
+      background-color: steelblue;
+      color: #fff;
+      border: 1px solid transparent;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #4682b4; /* Darker shade of steel blue on hover */
+    }
+
     
   </style>
 
@@ -76,15 +87,22 @@
     <!-- Main Content -->
     <section>
     <div class="container mt-5">
+      
       <h1 style="font-family: 'Montserrat', sans-serif;">Myles Holley</h1>
       <p style="font-family: 'Montserrat', sans-serif;">Immersive Designer</p>
-  
+      <div class="row">
+      <div class="col-md-6">
+        <!-- Image of Myles Holley -->
+        <img src="mylesphoto1.jpg" alt="Myles Holley photo for portfolio " class="img-fluid rounded-circle">
+      </div>
       <!-- Buttons -->
       <div class="button-container mt-4">
-        <a class="btn btn-primary" href="about.html" style="background-color: steelblue;">About Me</a>
-        <a class="btn btn-success" href="projects.html" style="background-color: steelblue;">Projects/skills</a>
-        <a class="btn btn-info" href="contact.html" style="background-color: steelblue;">Contact Me</a>
+        <a class="btn btn-custom mr-3" href="about.html" style="background-color: steelblue;">About Me</a>
+        <a class="btn btn-custom mr-3" href="projects.html" style="background-color: steelblue;">Projects/skills</a>
+        <a class="btn btn-custom mr-3" href="contact.html" style="background-color: steelblue;">Contact Me</a>
       </div>
+</div>
+      
     </div>
     </section>
 
