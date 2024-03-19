@@ -31,6 +31,18 @@
       
     }
 
+    /* Custom styles for the photo */
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-container img {
+      transition: transform 0.3s ease;
+    }
+    .img-container:hover img {
+      transform: scale(1.1); /* Increase the size of the image on hover */
+    }
+
   </style>
 </head>
 <body>
@@ -63,17 +75,17 @@
   <div class="container mt-5">
     <h1>amazon web services & amazon echo frames</h1>
     <div class="row mt-4">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="amazonphoto1.png" data-lightbox="project1">
         <img src="amazonphoto1.png" class="img-fluid" alt="Project 1 Photo 1">
         </a>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="portfolioproject1photo2.png" data-lightbox="project1">
         <img src="portfolioproject1photo2.png" class="img-fluid" alt="Project 1 Photo 2">
         </a>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="portfolioproject1photo3.png" data-lightbox="project1"></a>
         <img src="portfolioproject1photo3.png" class="img-fluid" alt="Project 1 Photo 3">
       </a>

@@ -30,6 +30,17 @@
 
       
     }
+    /* Custom styles for the photo */
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-container img {
+      transition: transform 0.3s ease;
+    }
+    .img-container:hover img {
+      transform: scale(1.1); /* Increase the size of the image on hover */
+    }
 
   </style>
 </head>
@@ -65,17 +76,17 @@
   <div class="container mt-5">
     <h1>Swift accesibility Design</h1>
     <div class="row mt-4">
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="Screenshot 2024-02-26 154449.png" data-lightbox="project3">
         <img src="Screenshot 2024-02-26 154449.png" class="img-fluid" alt="Project 3 Photo 1">
         </a>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="swidtimag2.png" data-lightbox="project3">
         <img src="swidtimag2.png" class="img-fluid" alt="Project 3 photo 2">
         </a>
       </div>
-      <div class="col-md-4 mb-4">
+      <div class="col-md-4 mb-4 img-container">
         <a href="swiftimage3.png" data-lightbox="project3">
         <img src="swiftimage3.png" class="img-fluid" alt="Project 3 Photo 3">
         </a>
